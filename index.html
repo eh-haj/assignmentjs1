@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body{
+                height: 625PX;
+                background: linear-gradient(#E58D97, #FAD8A6, #926298, #294180);
+            }
+            h1{
+                text-align: center;
+                text-shadow: 5px 5px 8px blue;
+            }
+            .cal{
+                width: 500px;
+                height: 250px;
+                background: #eee;
+                text-align: center;
+                margin: 50px auto;
+                border: 2px solid blue;
+                box-shadow: 5px 5px 8px blue;
+            }
+            .cal h3{
+                padding-top: 15px;
+                color: blue;
+            }
+            .cal textarea{
+                width: 250px;
+                height: 25px;
+                background: #000;
+                color: #fff;
+                font-size: 15px;
+            }
+            .cal button{
+                padding: 5px 20px;
+                background: blue;
+                border: 2px solid #000;
+                color: #eee;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>**Converting minutes into seconds</h1>
+        <div class="cal">
+            <h3>Enter the minutes</h3>
+            <textarea id="input" ></textarea>
+            <br><br>
+            <button id="btn" onclick="calculate()">Calculate</button>
+            <br> <br>
+            <textarea id="output"></textarea>
+        </div>
+        <script>
+            var input =document.getElementById("input");
+            var output = document.getElementById("output");
+            function calculate(){
+                if(isNaN(input.value)){
+                    output.value = "Please enter the number only";
+                }else if(input.value <= 0 ){
+                   output.value = "Value must be greater than 0"; 
+                }else{
+                    output.value = input.value*60 +" second"
+                }
+                
+            }
+        </script>
+    </body>
+</html>
