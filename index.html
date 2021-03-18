@@ -55,6 +55,8 @@
             function calculate(){
                 if(isNaN(input.value)){
                     output.value = "Please enter the number only";
+                }else if(input.value =="" ){
+                       output.value = "Please enter the number";
                 }else if(input.value <= 0 ){
                    output.value = "Value must be greater than 0"; 
                 }else{
